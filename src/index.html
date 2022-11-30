@@ -5,10 +5,51 @@
   })
   <body>
     <div class="wrapper">
-      @@include('html/header.html', {})
+      <!-- @@include('html/header.html', {}) -->
       <main class="page">
         <div data-observ></div>
-        
+        <!-- first section -->
+        <div class="head__section">
+          <div class="head__container">
+            <div class="head__logo">
+              <img src="images/logo.svg" alt="">
+            </div>
+            <div class="head__block">
+              <h1 class="head__title">Use our capital <br>to trade crypto</h1>
+              <h2 class="head__subtitle">
+                Get up to $250,000 in funds. <br>We cover the risk, and you keep 80% of the profit
+              </h2>
+              <div class="haed__form form">
+                  <form action="#">
+                    <img src="images/icons/mail-input.svg" alt="">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                    <input type="submit" class="form-submit" value="Join waitlist now">
+                  </form>
+              </div>
+              <img src="images/scroll-down.svg" alt="" class="scroll-down head__scroll">
+            </div>
+            <div class="user-1 user__box">
+              <img src="images/first__section/user-1.png" alt="">
+              <div class="quote">Bring your trading to the next level!</div>
+            </div>
+            <div class="user-1 user__box">
+              <img src="images/first__section/user-2.png" alt="">
+              <div class="quote">Jim just made $2,940</div>
+            </div>
+            <div class="user-1 user__box">
+              <img src="images/first__section/user-3.png" alt="">
+              <div class="quote">Chris just made $940</div>
+            </div>
+            <div class="user-1 user__box">
+              <img src="images/first__section/user-4.png" alt="">
+              <div class="quote">Peter just made $547</div>
+            </div>
+            <div class="user-1 user__box">
+              <img src="images/first__section/user-5.png" alt="">
+              <div class="quote">Hanna just made $1,840</div>
+            </div>
+          </div>
+        </div>
       </main>
       @@include('html/footer.html', {})
     </div>
