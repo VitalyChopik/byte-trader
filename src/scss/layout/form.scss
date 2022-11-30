@@ -1,0 +1,44 @@
+.form {
+    width: 100%;
+    form {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        max-width: 770px;
+        width: 100%;
+        padding: 8px 8px 8px 32px;
+        background: #0F121E;
+        border: 1px solid #1D1D28;
+        border-radius: 50px;
+        img {
+            width: 24px;
+            height: 24px;
+            margin-right: rem(16);
+        }
+        
+    }
+    &-control {
+        background: none;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        color: #B0B1B7;
+        max-width: 100%;
+        width: 100%;
+        margin-right: 20px;
+
+    }
+    &-submit {
+        margin-left: auto;
+        background: #F8DF55;
+        border-radius: 50px;
+        padding: 24px 40px;
+        font-size: 18px;
+        line-height: 18px;
+        color: #04040C;
+        cursor: pointer;
+        &:hover {
+        text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.head {
+    &__section {
+        width: 100%;
+        padding-top: 8px;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+    }
+    &__logo {
+        display: flex;
+        justify-content: center;
+        img {
+            max-width: 200px;
+        }
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        .user__box {
+            position: absolute;
+           bottom: 0;
+            &.user-1 {
+                top: -12.89vh;
+                left: -23px;
+            }
+            &.user-2 {
+                top: -14.67vh;
+                right: -18px;
+            }
+            &.user-3 {
+                top: 12.33vh;
+                right: -70px;
+            }
+            &.user-4 {
+                bottom: -10.44vh;
+                left: -20px;
+            }
+            &.user-5 {
+                bottom: -16.67vh;
+                right: 20px;
+            }
+            &.user-1, &.user-4  {
+
+                .quote {
+                    border-radius: 20px 20px 0px 20px;
+                }
+                img {
+                    margin-left: auto;
+                    margin-right: -60px;
+                }
+            }
+            &.user-2, &.user-3, &.user-5  {
+
+                .quote {
+                    border-radius: 20px 20px 20px 0px;
+                }
+                img {
+                    margin-right: auto;
+                    margin-left: -60px;
+                }
+            }
+        }
+
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 74px;
+        line-height: 120%;
+        margin-bottom: rem(34);
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        margin-bottom: rem(46);
+    }
+    &__scroll {
+        max-width: 294px;
+        margin: 0 auto rem(53);
+        display: flex;
+    }
+}
