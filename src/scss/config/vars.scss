@@ -1,4 +1,4 @@
-$maxWidth: 1920; // максимальная ширина страницы
+$maxWidth: 1440; // максимальная ширина страницы
 $minWidth: 320; // минимальная ширина телефона
 $maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
 $containerWidth: 1170; // ширина контейнера из макета
@@ -18,8 +18,8 @@ $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;
 
 $mainFontFamily: $mainFont, sans-serif;
-$fontColor: $blackColor;
-$fontSize: rem(16);
+$fontColor: $whiteColor;
+$fontSize: rem(20);
 $mainRadius: rem(10);
 
 $standartTrans: all 280ms ease-in-out 0ms;
