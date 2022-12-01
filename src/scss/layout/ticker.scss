@@ -7,6 +7,7 @@
     linear-gradient(89.99deg, rgba(81, 77, 243, 0.05) 0.01%, rgba(81, 77, 243, 0.2) 21.93%, rgba(81, 77, 243, 0.05) 43.09%, rgba(81, 77, 243, 0.2) 65.29%, rgba(81, 77, 243, 0.05) 84.04%, rgba(81, 77, 243, 0.2) 99.99%);
     backdrop-filter: blur(100px);
     position: relative;
+    margin-bottom: 60px;
     &::before {
         content: "";
         position: absolute;
@@ -29,7 +30,6 @@
         // left: 0;
         // right: 0;
         align-items: center;
-        
     }
     &__box {
         font-size: 24px;
