@@ -393,7 +393,7 @@ body .lock {
           flex-direction: column;
 }
 
-.user__box img {
+.user__box picture {
   width: 60px;
   height: 60px;
   -webkit-box-ordinal-group: 3;
@@ -602,12 +602,6 @@ body .lock {
   border-radius: 20px 20px 0px 20px;
 }
 
-.head__block .user__box.user-1 img,
-.head__block .user__box.user-4 img {
-  margin-left: auto;
-  margin-right: -60px;
-}
-
 .head__block .user__box.user-1 picture,
 .head__block .user__box.user-4 picture {
   margin-left: auto;
@@ -618,13 +612,6 @@ body .lock {
 .head__block .user__box.user-3 .quote,
 .head__block .user__box.user-5 .quote {
   border-radius: 20px 20px 20px 0px;
-}
-
-.head__block .user__box.user-2 img,
-.head__block .user__box.user-3 img,
-.head__block .user__box.user-5 img {
-  margin-right: auto;
-  margin-left: -60px;
 }
 
 .head__block .user__box.user-2 picture,
