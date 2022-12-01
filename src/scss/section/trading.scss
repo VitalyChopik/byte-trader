@@ -1,6 +1,6 @@
 .trading {
     &__section {
-        margin-bottom: 84px;
+        margin-bottom: rem(160);
     }
     &__title {
         font-weight: 500;
@@ -31,7 +31,6 @@
             &:nth-child(2) {
                 max-width: 580px;
                 width: 100%;
-                transform: translateX(10px);
             }
         }
         &.small-box {

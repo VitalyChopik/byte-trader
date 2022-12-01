@@ -1,0 +1,106 @@
+.trigger {
+    &__section {
+        text-align: center;
+        margin-bottom: rem(160);
+    }
+    &__block {
+        padding: 112px 24px;
+        background: linear-gradient(0deg, rgba(15, 18, 30, 0.2), rgba(15, 18, 30, 0.2)),
+linear-gradient(81.45deg, rgba(81, 77, 243, 0.3) 0%, rgba(81, 77, 243, 0.05) 30.97%, rgba(81, 77, 243, 0.3) 99.76%);
+
+        backdrop-filter: blur(100px);
+        border-radius: 12px;
+        position: relative;
+        .user__box {
+            position: absolute;
+           bottom: 0;
+            &.user-1 {
+                top: rem(-76);
+                left: -6px;
+                .quote {
+                    border-radius: 20px 20px 0px 20px;
+                }
+                img {
+                    margin-left: auto;
+                    margin-right: -60px;
+                }
+                picture {
+                    margin-left: auto;
+                    margin-right: -60px;
+                    img {
+                        margin: 0;
+                    }
+                }
+            }
+            &.user-2 {
+                top: rem(-78);
+                right: rem(91);
+                max-width: 180px;
+                .quote {
+                    border-radius: 20px 20px 20px 0px;
+                    
+                }
+                img {
+                    margin-right: auto;
+                    margin-left: -60px;     
+                }
+                picture {
+                    margin-right: auto;
+                    margin-left: -60px;
+                    img {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 120%;
+        margin-bottom: rem(16);
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 160%;
+        margin-bottom: rem(40);
+    }
+    &__form {
+        margin-bottom: rem(72);
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #04040C;
+        border: 1px solid rgba(81, 77, 243, 0.2);
+        border-radius: 24px;
+        padding: 24px;
+        position: relative;
+        .text {
+            margin: 0 auto;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+            color: #F8DF55;
+            max-width: 522px;
+            width: 100%;
+        }
+        .line {
+            background: rgba(81, 77, 243, 0.2);
+            height: 58px;
+            width: 1px;
+            left: 50%;
+            right: 50%;
+            display: flex;
+            position: absolute;
+            &::before {
+               content: "";
+               background: rgba(81, 77, 243, 0.2);
+               height: 100%;
+               width: 1px; 
+            }
+        }
+    }
+}
