@@ -608,6 +608,12 @@ body .lock {
   margin-right: -60px;
 }
 
+.head__block .user__box.user-1 picture,
+.head__block .user__box.user-4 picture {
+  margin-left: auto;
+  margin-right: -60px;
+}
+
 .head__block .user__box.user-2 .quote,
 .head__block .user__box.user-3 .quote,
 .head__block .user__box.user-5 .quote {
@@ -617,6 +623,13 @@ body .lock {
 .head__block .user__box.user-2 img,
 .head__block .user__box.user-3 img,
 .head__block .user__box.user-5 img {
+  margin-right: auto;
+  margin-left: -60px;
+}
+
+.head__block .user__box.user-2 picture,
+.head__block .user__box.user-3 picture,
+.head__block .user__box.user-5 picture {
   margin-right: auto;
   margin-left: -60px;
 }
@@ -814,6 +827,11 @@ body .lock {
 }
 
 .funded__box img {
+  max-width: 56px;
+  margin-bottom: 1.5rem;
+}
+
+.funded__box picture {
   max-width: 56px;
   margin-bottom: 1.5rem;
 }
