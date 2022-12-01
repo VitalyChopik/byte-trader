@@ -1110,11 +1110,10 @@ body .lock {
   width: 100%;
 }
 
-.about__box.small-box .title {
+.about__box.small-box .small-box__title {
   font-weight: 500;
   font-size: 20px;
   line-height: 32px;
-  margin-bottom: 3.3125rem;
 }
 
 .about__box.small-box .column {
