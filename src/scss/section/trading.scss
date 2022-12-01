@@ -1,0 +1,65 @@
+.trading {
+    &__section {
+        margin-bottom: 84px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: rem(60);
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__box {
+        overflow: hidden;
+        &.big-box {
+            max-width: 560px;
+            margin-bottom: rem(40);
+            p {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 160%;
+                margin-bottom: rem(30);
+            }
+            img {
+                width: 100%;
+            }
+            &:nth-child(2) {
+                max-width: 580px;
+                width: 100%;
+                transform: translateX(10px);
+            }
+        }
+        &.small-box {
+            max-width: 270px;
+            width: 100%;
+            position: relative;
+            height: 152px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            .box-bg {
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            .icon {
+                max-width: 32px;
+                margin-bottom: 16px;
+            }
+            span {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 120%;
+            }
+        }
+    }
+}

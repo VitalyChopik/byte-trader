@@ -52,9 +52,16 @@
                 .quote {
                     border-radius: 20px 20px 0px 20px;
                 }
+                img {
+                    margin-left: auto;
+                    margin-right: -60px;
+                }
                 picture {
                     margin-left: auto;
                     margin-right: -60px;
+                    img {
+                        margin: 0;
+                    }
                 }
             }
             &.user-2, &.user-3, &.user-5  {
@@ -62,9 +69,16 @@
                 .quote {
                     border-radius: 20px 20px 20px 0px;
                 }
+                img {
+                    margin-right: auto;
+                    margin-left: -60px;     
+                }
                 picture {
                     margin-right: auto;
                     margin-left: -60px;
+                    img {
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -86,17 +100,17 @@
         max-width: 294px;
         margin: 0 auto rem(53);
         display: flex;
-        animation: pulse 1.5s infinite
+        animation: down 1.5s infinite
     }
 }
-@keyframes pulse {
+@keyframes down {
     0% {
-        transform: scale(0.95)
+        transform: translateY(10px);
     }
     70% {
-        transform: scale(1)
+        transform: translateY(0px);
     }
       100% {
-        transform: scale(0.95)
+        transform: translateY(10px);
     }
   }
