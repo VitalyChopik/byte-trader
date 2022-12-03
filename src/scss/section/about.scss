@@ -1,6 +1,9 @@
 .about {
     &__section {
         margin-bottom: rem(150);
+        @include media(990){
+            margin-bottom: rem(72);
+        }
     }
     &__title {
         font-weight: 500;
@@ -9,10 +12,18 @@
         text-align: center;
         max-width: 992px;
         margin: 0 auto rem(60);
+        @include media(990){
+            font-size: 32px;
+            line-height: 130%;
+            margin-bottom: rem(32);
+        }
     }
     &__block {
         display: flex;
         justify-content: space-between;
+        @include media(990){
+            flex-wrap: wrap;
+        }
     }
     &__box {
         &.small-box {
@@ -21,32 +32,61 @@
             justify-content: space-between;
             max-width: 470px;
             width: 100%;
+            @include media(990){
+                max-width: 100%;
+                margin-bottom: rem(16);
+            }
             .small-box__title {
                 font-weight: 500;
                 font-size: 20px;
                 line-height: 32px;
+                width: 100%;
+                @include media(990){
+                    margin-bottom: rem(16);
+                }
             }
             .column {
                 margin-top: rem(-100);
                max-width: 223px; 
+               @include media(990){
+                max-width: 200px;
+                margin: 0 auto;
+               }
+               @include media(500){
+                max-width: 164px;
+                margin: 0;
+               }
                img {
                 width: 100%;
                 margin-bottom: rem(30);
+                @include media(990){
+                    margin-bottom: rem(16);
+                }
                }
                &:nth-child(3) {
                  padding-top: rem(54);
+                 @include media(500){
+                    padding-top: rem(16);
+                   }
                }
             }
         }
         &.big-box {
             max-width: 670px;
             width: 100%;
+            @include media(990){
+                margin: 0 auto;
+            }
             .box {
                 margin-bottom: 12px;
                 background: linear-gradient(0deg, rgba(15, 18, 30, 0.2), rgba(15, 18, 30, 0.2)),
                 linear-gradient(259.24deg, rgba(81, 77, 243, 0.2) 1.19%, rgba(81, 77, 243, 0.05) 100%);
                 border-radius: 12px;
                 padding: 40px;
+                @include media(990){
+                    margin-bottom: rem(32);
+                    padding: 24px 16px;
+                }
                 &.about-info {
                     .title {
                         font-weight: 500;
@@ -72,6 +112,7 @@
                         }
                         img {
                             max-width: 18px;
+                            @include media(990){}
                         }
                     }
                 }
@@ -95,13 +136,20 @@
                     .box-image {
                         display: flex;
                         justify-content: space-between;
+                        @include media(990){
+                            flex-wrap: wrap;
+                        }
                         img {
                             max-width: 200px;
+                            @include media(990){}
                         }
                     }
                 }
                 &.backed {
                     padding: 32px 38px 20px 32px;
+                    @include media(990){
+                        padding: 24px 16px;
+                    }
                     .title {
                         font-weight: 500;
                         font-size: 24px;
@@ -111,6 +159,9 @@
                     .box-image {
                         display: flex;
                         justify-content: space-between;
+                        @include media(990){
+                            flex-wrap: wrap;
+                        }
                         img {
                             max-width: 150px;
                         }

@@ -1,6 +1,9 @@
 .challenges{
     &__section {
         margin-bottom: rem(160);
+        @include media(990) {
+            margin-bottom: rem(72);
+        }
     }
     // заголовок
     &__title {
@@ -9,6 +12,11 @@
         line-height: 120%;
         margin-bottom: rem(16);
         text-align: center;
+        @include media(990) {
+            font-size: 32px;
+            line-height: 130%;
+            margin-bottom: rem(12);
+        }
     }
     // подзаголовок
     &__subtitle {
@@ -18,6 +26,11 @@
         text-align: center;
         max-width: 970px;
         margin: 0 auto rem(48);
+        @include media(990) {
+            font-size: 16px;
+            line-height: 160%;
+            margin-bottom: rem(32);
+        }
     }
     // общий блок для содержащий контент
     &__block {
@@ -33,6 +46,10 @@
             justify-content: center;
             align-items: center;
             margin-bottom: rem(48);
+            @include media(990) {
+                flex-wrap: wrap;
+                margin-bottom: rem(16);
+            }
         }
         // кнопки планов
         &-plan {
@@ -48,14 +65,26 @@
             img {
                 max-width: 48px;
                 margin-right: 20px;
+                @include media(600) {
+                    margin-right: 8px;
+                 }
             }
             span {
                 font-weight: 500;
                 font-size: 24px;
                 line-height: 31px;
+                @include media(600) {
+                    font-size: 20px;
+                    line-height: 26px;
+                 }
             }
             &.active {
                 background: #514DF3;  
+            }
+            @include media(600) {
+               width: 100%;
+               justify-content: start;
+               margin-bottom: rem(16);
             }
         }
         // блок с ценами
@@ -63,11 +92,34 @@
             display: flex;
             align-items: center;
             margin-bottom: rem(40);
+            position: relative;
+            flex-wrap: wrap;
+            width: 100%;
             .text {
                 font-weight: 500;
                 font-size: 24px;
                 line-height: 160%;
                 margin-right: 10px;
+                @include media (990){
+                    margin-bottom: 16px;
+                }
+            }
+            @include media (990){
+                justify-content: start;
+                margin-bottom: rem(32);
+            }
+        }
+        &-deposits {
+            display: flex;
+            align-items: center;
+            margin-left: -6px;
+            @include media (990){
+                overflow-x: scroll;
+                justify-content: start;
+                width: 100%;
+                &::-webkit-scrollbar {
+                    width: 0;
+                  }
             }
         }
         // кнопки с ценами
@@ -83,12 +135,19 @@
             &.active {
                 background: #514DF3;
             }
+            @include media (990){
+                font-size: 20px;
+                line-height: 26px;
+            }
         }
         // Таблицы
         &-content {
             margin-bottom: rem(60);
             max-width: 800px;
             width: 100%;
+            @include media (990){
+                margin-bottom: rem(32);
+            }
             .content {
                 &__block {
                     width: 100%;
@@ -104,6 +163,9 @@
                         top: -16px;
                         bottom: -16px;
                         z-index: -1;
+                        @include media(990) {
+                            content: none;
+                        }
                     }
                     &::after {
                         content:"";
@@ -115,6 +177,9 @@
                         bottom: -16px;
                         z-index: 1;
                         border: 1px solid #131329;
+                        @include media(990) {
+                            content: none;
+                        }
                     }
                     display: none;
                     &.active {
@@ -132,6 +197,11 @@
                     // border-right: 1px solid #131329;
                     padding: 15px 12px 15px 0px;
                     cursor: pointer;
+                    @include media(600) {
+                        width: 100%;
+                        padding: 0;
+                        padding-bottom: 8px;
+                    } 
                     .title {
                         display: flex;
                         justify-content: space-between;
@@ -142,6 +212,8 @@
                         }
                         svg {
                             width: 20px;
+                            transform: rotate(180deg);
+                            transition: all 0.5s ease-in-out;
                         }
                     }
                     .text {
@@ -159,6 +231,11 @@
                             margin-top: 8px;
                             max-height: 100%;
                         }
+                        .title {
+                            svg {
+                                transform: rotate(0deg);
+                            }
+                        }
                     }
                 }
                 &__box {
@@ -166,14 +243,25 @@
                     align-items: center;
                     justify-content: space-between;
                     border-bottom: 1px solid #131329;
+                    @include media(600) {
+                        flex-direction: column;
+                        align-items: start;
+                        padding: 16px 0px;
+                    }
                     .value {
                         width: 50%;
                         text-align: center;
-                                            
+                        @include media(600) {
+                            width: 100%;
+                            text-align: left;
+                        }   
                         span {
                             font-weight: 400;
                             font-size: 16px;
                             line-height: 160%; 
+                            @include media(600) {
+                               font-weight: 700;
+                            }
                         }
                     }
                 }

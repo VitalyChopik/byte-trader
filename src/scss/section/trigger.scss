@@ -2,31 +2,47 @@
     &__section {
         text-align: center;
         margin-bottom: rem(160);
+        @include media (990){
+            margin-bottom: rem(72);
+        }
     }
     &__block {
         padding: 112px 24px;
         background: linear-gradient(0deg, rgba(15, 18, 30, 0.2), rgba(15, 18, 30, 0.2)),
-linear-gradient(81.45deg, rgba(81, 77, 243, 0.3) 0%, rgba(81, 77, 243, 0.05) 30.97%, rgba(81, 77, 243, 0.3) 99.76%);
-
+        linear-gradient(81.45deg, rgba(81, 77, 243, 0.3) 0%, rgba(81, 77, 243, 0.05) 30.97%, rgba(81, 77, 243, 0.3) 99.76%);
         backdrop-filter: blur(100px);
         border-radius: 12px;
         position: relative;
+        @include media (990){
+           padding: 40px 12px;
+        }
         .user__box {
             position: absolute;
            bottom: 0;
             &.user-1 {
                 top: rem(-76);
                 left: -6px;
+                @include media (990){
+                    max-width: 134px;
+                    top: rem(-55);
+                    left: -14px;
+                 }
                 .quote {
                     border-radius: 20px 20px 0px 20px;
                 }
                 img {
                     margin-left: auto;
                     margin-right: -60px;
+                    @include media (990){
+                        margin-right: -40px;
+                     }
                 }
                 picture {
                     margin-left: auto;
                     margin-right: -60px;
+                    @include media (990){
+                        margin-right: -40px;
+                     }
                     img {
                         margin: 0;
                     }
@@ -36,17 +52,28 @@ linear-gradient(81.45deg, rgba(81, 77, 243, 0.3) 0%, rgba(81, 77, 243, 0.05) 30.
                 top: rem(-78);
                 right: rem(91);
                 max-width: 180px;
+                @include media (990){
+                    top: rem(-37);
+                    right: -11px;
+                    max-width: 120px;
+                 }
                 .quote {
                     border-radius: 20px 20px 20px 0px;
                     
                 }
                 img {
                     margin-right: auto;
-                    margin-left: -60px;     
+                    margin-left: -60px;  
+                    @include media (990){
+                        margin-left: -40px;
+                     }
                 }
                 picture {
                     margin-right: auto;
                     margin-left: -60px;
+                    @include media (990){
+                        margin-left: -40px;
+                     }
                     img {
                         margin: 0;
                     }
@@ -59,15 +86,26 @@ linear-gradient(81.45deg, rgba(81, 77, 243, 0.3) 0%, rgba(81, 77, 243, 0.05) 30.
         font-size: 48px;
         line-height: 120%;
         margin-bottom: rem(16);
+        @include media (990){
+            font-size: 28px;
+            line-height: 130%;
+         }
     }
     &__subtitle {
         font-weight: 400;
         font-size: 24px;
         line-height: 160%;
         margin-bottom: rem(40);
+        @include media (990){
+            font-size: 22px;
+            line-height: 150%;
+         }
     }
     &__form {
         margin-bottom: rem(72);
+        @include media (600){
+            margin-bottom: rem(130);
+         }
     }
     &__box {
         display: flex;
@@ -78,6 +116,20 @@ linear-gradient(81.45deg, rgba(81, 77, 243, 0.3) 0%, rgba(81, 77, 243, 0.05) 30.
         border-radius: 24px;
         padding: 24px;
         position: relative;
+        &::before {
+                content: "";
+                position: absolute;
+                top: -2px;
+                bottom: -2px;
+                left: -2px;
+                right: -2px;
+                background: linear-gradient(259.24deg, rgba(81, 77, 243, 0.2) 1.19%, rgba(81, 77, 243, 0.05) 100%);
+                border-radius: 24px;
+                z-index: -1;
+        }
+        @include media (990){
+            flex-wrap: wrap;
+         }
         .text {
             margin: 0 auto;
             font-weight: 700;
@@ -86,6 +138,27 @@ linear-gradient(81.45deg, rgba(81, 77, 243, 0.3) 0%, rgba(81, 77, 243, 0.05) 30.
             color: #F8DF55;
             max-width: 522px;
             width: 100%;
+            br {
+                @include media (990){
+                   display: none;
+                 }
+            }
+            &:nth-child(1) {
+                @include media (990){
+                    margin-bottom: 15px;
+                 }
+               
+            }
+            &:last-child {
+                @include media (990){
+                    margin-top: 15px;
+                 }
+               
+            }
+            @include media (990){
+                font-size: 18px;
+                line-height: 120%;
+             }
         }
         .line {
             background: rgba(81, 77, 243, 0.2);
@@ -94,7 +167,14 @@ linear-gradient(81.45deg, rgba(81, 77, 243, 0.3) 0%, rgba(81, 77, 243, 0.05) 30.
             left: 50%;
             right: 50%;
             display: flex;
-            position: absolute;
+            // position: absolute;
+            @include media (990){
+                height: 1px;
+                width: 270px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+             }
             &::before {
                content: "";
                background: rgba(81, 77, 243, 0.2);
