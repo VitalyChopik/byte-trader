@@ -15,6 +15,10 @@
         justify-content: center;
         img {
             max-width: 200px;
+            @include media(990) {   
+                max-width: 140px;
+                margin-bottom: 86px;
+            }
         }
     }
     &__block {
@@ -30,22 +34,51 @@
             &.user-1 {
                 top: -12.89vh;
                 left: -23px;
+                @include media(1200) {
+                    left: 5px;
+                }
+                @include media(990) {
+                    left: -8px;
+                }
             }
             &.user-2 {
                 top: -14.67vh;
                 right: -18px;
+                @include media(1200) {
+                    right: 5px;
+                }
             }
             &.user-3 {
                 top: 12.33vh;
                 right: -70px;
+                @include media(1366) {
+                    right: 5px;
+                }
+                @include media(990) {
+                   display: none;
+                }
             }
             &.user-4 {
                 bottom: -10.44vh;
                 left: -20px;
+                @include media(1200) {
+                    left: 5px;
+                }
+                @include media(600) {   
+                    bottom: 2vh;
+                    left: 10px;
+                }
             }
             &.user-5 {
                 bottom: -16.67vh;
                 right: 20px;
+                @include media(1200) {
+                    bottom: -10.44vh;
+                }
+                @include media(600) {   
+                    bottom: 5vh;
+                    right: -11px;
+                }
             }
             &.user-1, &.user-4  {
 
@@ -55,10 +88,16 @@
                 img {
                     margin-left: auto;
                     margin-right: -60px;
+                    @include media(990) {
+                        margin-right: -40px; 
+                    } 
                 }
                 picture {
                     margin-left: auto;
                     margin-right: -60px;
+                    @include media(990) {
+                        margin-right: -40px; 
+                    } 
                     img {
                         margin: 0;
                     }
@@ -71,11 +110,17 @@
                 }
                 img {
                     margin-right: auto;
-                    margin-left: -60px;     
+                    margin-left: -60px;   
+                    @include media(990) {
+                        margin-left: -40px; 
+                    }  
                 }
                 picture {
                     margin-right: auto;
                     margin-left: -60px;
+                    @include media(990) {
+                        margin-left: -40px; 
+                    } 
                     img {
                         margin: 0;
                     }
@@ -89,18 +134,37 @@
         font-size: 74px;
         line-height: 120%;
         margin-bottom: rem(34);
+        @include media(990) {   
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 120%;
+            margin-bottom: rem(12);
+        }
     }
     &__subtitle {
         font-weight: 400;
         font-size: 24px;
         line-height: 150%;
         margin-bottom: rem(46);
+        @include media(990) {   
+            font-size: 22px;
+            line-height: 150%;
+            margin-bottom: rem(24);
+        }
     }
     &__scroll {
         max-width: 294px;
         margin: 0 auto rem(53);
         display: flex;
-        animation: down 1.5s infinite
+        animation: down 1.5s infinite;
+        @include media(600) {   
+            margin-bottom: rem(70);
+        }
+    }
+    &__form {
+        @include media(600) {   
+            margin-bottom: rem(210);
+        }  
     }
 }
 @keyframes down {

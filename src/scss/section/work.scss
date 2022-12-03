@@ -3,6 +3,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: rem(160);
+        @include media(990) {
+            margin-bottom: 76px;
+            flex-wrap: wrap;
+        }
     }
     &__image {
         background: #020205;
@@ -13,6 +17,13 @@
         padding: 14px 24px 0 0;
         position: relative;
         overflow: hidden;
+        @include media(990) {
+            max-width: 343px;
+            height: 343px;
+            border-radius: 8.575px;
+            padding: 0 17px;
+            margin: 0 auto rem(24);
+        }
     }
     &__logo {
         max-width: 109px;
@@ -23,6 +34,12 @@
         img {
             width: 100%;
         }
+        @include media(990) {
+            max-width: 90px;
+            left: 16px;
+            top: 0;
+            z-index: 1;
+        }
     }
     &__lottie {
         position: absolute;
@@ -31,13 +48,31 @@
         z-index: 1;
         lottie-player {
             max-width: 200px;
+            @include media(990) {
+                max-width: 144px;
+            }
+        }
+        @include media(990) {
+            top: 12px;
+            right: 17px;
         }
     }
     &__people {
         position: absolute;
         bottom: -0;
         left: -0;
+        img {
+            max-width: 100%;
+        }
         picture { 
+            @include media(990) {
+                max-width: 260px;
+                max-height: 260px;
+            }
+        }
+        @include media(990) {
+            max-width: 260px;
+            max-height: 260px;
         }
     }
     &__setting-img {
@@ -47,12 +82,26 @@
         img {
             max-width: 23px;
         }
+        @include media(990) {
+            left: 34px;
+            top:142px;
+        }
     }
     &__candle-img {
         position: absolute;
         bottom: 124px;
         right: 27px;
-
+        img {
+            
+            @include media(990) {
+                max-width: 100%;
+            }
+        }
+        @include media(990) {
+            max-width: 34px;
+            right: 22px;
+            bottom: 86px;
+        }
     }
     &__text {
         max-width: 570px;
@@ -62,6 +111,11 @@
             font-size: 20px;
             line-height: 160%;
             margin-bottom: 20px;
+            @include media(990) {
+                font-size: 16px;
+                line-height: 160%;
+                margin-bottom: rem(16);
+            }
         }
     }
     &__title {
@@ -70,5 +124,16 @@
         line-height: 130%;
         color: #FFFFFF;
         margin-bottom: rem(24);
+        br {
+            display: none;
+            @include media(990) {
+            display: block;
+            }
+        }
+        @include media(990) {
+            font-size: 32px;
+            line-height: 130%;
+            margin-bottom: rem(12);
+        }
     }
 }

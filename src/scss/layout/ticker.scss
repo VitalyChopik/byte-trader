@@ -8,6 +8,10 @@
     backdrop-filter: blur(100px);
     position: relative;
     margin-bottom: 60px;
+    @include media (990) {
+        height: 70px;
+        margin-bottom: rem(72);
+    }
     &::before {
         content: "";
         position: absolute;
@@ -39,6 +43,12 @@
         margin: 0 40px;
         white-space: nowrap;
         float: left;
+        @include media (990) {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 120%;
+            margin: 0 20px;
+        }
     }
 }
 @keyframes marquee {
