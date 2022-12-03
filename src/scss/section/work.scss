@@ -16,7 +16,18 @@
         height: 480px;
         padding: 14px 24px 0 0;
         position: relative;
-        overflow: hidden;
+        // overflow: hidden;
+        &::before {
+                content: "";
+                position: absolute;
+                top: -2px;
+                bottom: -2px;
+                left: -2px;
+                right: -2px;
+                background: linear-gradient(259.24deg, rgba(81, 77, 243, 0.2) 1.19%, rgba(81, 77, 243, 0.05) 100%);
+                border-radius: 12px;
+                z-index: -1;
+        }
         @include media(990) {
             max-width: 343px;
             height: 343px;
@@ -61,8 +72,10 @@
         position: absolute;
         bottom: -0;
         left: -0;
+        
         img {
             max-width: 100%;
+            border-radius: 12px;
         }
         picture { 
             @include media(990) {
