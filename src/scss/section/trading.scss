@@ -1,6 +1,9 @@
 .trading {
     &__section {
         margin-bottom: rem(160);
+        @include media(990) {
+            margin-bottom: rem(128);
+        }
     }
     &__title {
         font-weight: 500;
@@ -8,6 +11,11 @@
         line-height: 120%;
         text-align: center;
         margin-bottom: rem(60);
+        @include media(990) {
+            font-size: 32px;
+            line-height: 130%;
+            margin-bottom: rem(24);
+        }
     }
     &__block {
         display: flex;
@@ -19,11 +27,19 @@
         &.big-box {
             max-width: 560px;
             margin-bottom: rem(40);
+            @include media(990){
+                margin: 0 auto rem(32);
+            }
             p {
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 160%;
                 margin-bottom: rem(30);
+                @include media(990){
+                    font-size: 16px;
+                    line-height: 160%;
+                    margin-bottom: rem(12);
+                }
             }
             img {
                 width: 100%;
@@ -43,12 +59,26 @@
             justify-content: center;
             flex-direction: column;
             text-align: center;
+            @include media(990) {
+                max-width: 350px;
+                margin: 0 auto rem(24);
+                height: 200px;
+            }
             .box-bg {
                 position: absolute;
                 top:0;
                 bottom: 0;
                 left: 0;
                 right: 0;
+                z-index: -1;
+                img{
+                    @include media(990) {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 12px;
+                    }  
+                }
             }
             .icon {
                 max-width: 32px;
@@ -58,6 +88,8 @@
                 font-weight: 500;
                 font-size: 20px;
                 line-height: 120%;
+                max-width: 270px;
+                margin: 0 auto;
             }
         }
     }

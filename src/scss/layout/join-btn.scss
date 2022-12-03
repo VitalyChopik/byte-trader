@@ -15,4 +15,8 @@
     &:hover {
     text-decoration: underline;
     }
+    @include media (990) {
+        padding: 19px 40px;
+        font-weight: 700;
+    }
 }
