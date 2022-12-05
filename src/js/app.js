@@ -52,6 +52,7 @@ function toggleAccordion() {
         if ( ! currentBtn.classList.contains('active')){
             tabsBtn.forEach(function(item){
                 item.classList.remove('active')
+                currentTab.classList.remove('active')
             })
             tabsItems.forEach(function(item){
                 item.classList.remove('active')
