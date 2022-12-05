@@ -1336,6 +1336,15 @@ body .lock {
   margin-bottom: 3rem;
 }
 
+.challenges__label input {
+  display: none;
+}
+
+.challenges__label input:checked + .challenges__tabs-plan,
+.challenges__label input:checked + .challenges__tabs-deposit {
+  background: #514df3;
+}
+
 .challenges__tabs-plan {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1346,16 +1355,21 @@ body .lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #1D1D28;
+  background: #1d1d28;
   border-radius: 30px;
   padding: 8px 24px 8px 8px;
   height: 64px;
   margin: 0 6px;
   cursor: pointer;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
 }
 
 .challenges__tabs-plan img {
-  max-width: 48px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48px;
+          flex: 0 0 48px;
   margin-right: 20px;
 }
 
@@ -1365,47 +1379,41 @@ body .lock {
   line-height: 31px;
 }
 
-.challenges__tabs-plan.active {
-  background: #514DF3;
-}
-
 .challenges__tabs-capital {
+  width: 100%;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 2.5rem;
-  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  margin-bottom: 2.5rem;
 }
 
 .challenges__tabs-capital .text {
   font-weight: 500;
   font-size: 24px;
   line-height: 160%;
-  margin-right: 10px;
+  margin-right: 16px;
 }
 
 .challenges__tabs-deposits {
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: -6px;
-}
-
-.challenges__tabs-deposits.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .challenges__tabs-deposit {
-  background: #1D1D28;
+  background: #1d1d28;
   border-radius: 30px;
   padding: 8px 24px;
   font-weight: 500;
@@ -1413,22 +1421,25 @@ body .lock {
   line-height: 31px;
   margin: 0 6px;
   cursor: pointer;
-}
-
-.challenges__tabs-deposit.active {
-  background: #514DF3;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
 }
 
 .challenges__tabs-content {
-  margin-bottom: 3.75rem;
   max-width: 800px;
   width: 100%;
+  margin-bottom: 3.75rem;
 }
 
 .challenges__tabs-content .content__block {
   width: 100%;
   position: relative;
   display: none;
+}
+
+.challenges__tabs-content .content__block.active {
+  display: block;
 }
 
 .challenges__tabs-content .content__block::before {
@@ -1455,10 +1466,6 @@ body .lock {
   bottom: -16px;
   z-index: 1;
   border: 1px solid #131329;
-}
-
-.challenges__tabs-content .content__block.active {
-  display: block;
 }
 
 .challenges__tabs-content .content__block .attached__block {
@@ -1964,15 +1971,15 @@ body .lock {
     margin-bottom: 1rem;
   }
 
-  .challenges__tabs-capital .text {
-    margin-bottom: 16px;
-  }
-
   .challenges__tabs-capital {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
     margin-bottom: 2rem;
+  }
+
+  .challenges__tabs-capital .text {
+    margin-bottom: 16px;
   }
 
   .challenges__tabs-deposits {
@@ -1984,7 +1991,7 @@ body .lock {
   }
 
   .challenges__tabs-deposits::-webkit-scrollbar {
-    width: 0;
+    display: none;
   }
 
   .challenges__tabs-deposit {
@@ -2104,6 +2111,14 @@ body .lock {
     margin-bottom: 8.125rem;
   }
 
+  .challenges__tabs-plan {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin-bottom: 1rem;
+  }
+
   .challenges__tabs-plan img {
     margin-right: 8px;
   }
@@ -2111,14 +2126,6 @@ body .lock {
   .challenges__tabs-plan span {
     font-size: 20px;
     line-height: 26px;
-  }
-
-  .challenges__tabs-plan {
-    width: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    margin-bottom: 1rem;
   }
 
   .challenges__tabs-content .content-wrapper {
