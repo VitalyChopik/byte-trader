@@ -1,5 +1,4 @@
 import { isWebp, headerFixed } from './modules'
-import investmentDataMapping from './modules/investmentDataMapping'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -45,24 +44,27 @@ const investmentСalculationForm = document.querySelector('.challenges__block')
 
 if (investmentСalculationForm) {
   const recalculate = () => {
-    const category = investmentСalculationForm.querySelector('input[name="category"]:checked').value
-    const capital = investmentСalculationForm.querySelector('input[name="capital"]:checked').value
-    const investmentTables = investmentСalculationForm.querySelectorAll(`[data-table]`)
-    const investmentData = investmentDataMapping[category][capital]
+    const category = investmentСalculationForm.querySelector(
+      'input[name="category"]:checked'
+    ).value
+    const capital = investmentСalculationForm.querySelector(
+      'input[name="capital"]:checked'
+    ).value
 
-    console.log(investmentData);
-
-    for (const key in investmentData) {
-      const investmentTable = investmentСalculationForm.querySelector(`[data-table="${investmentData[key]}"]`)
-
-      investmentTables.forEach((table) => table.style.display = 'none')
-      investmentTable.style.display = 'block'
-    }
+    investmentСalculationForm
+      .querySelectorAll(`[data-table]`)
+      .forEach((table) => table.classList.remove('_active'))
+    
+    investmentСalculationForm
+      .querySelector(`[data-table="${category}-${capital}"]`)
+      .classList.add('_active')
   }
 
   recalculate()
 
-  investmentСalculationForm.querySelectorAll('input[type="radio"]').forEach((inputRadio) => {
-    inputRadio.addEventListener('input', recalculate)
-  })
+  investmentСalculationForm
+    .querySelectorAll('input[type="radio"]')
+    .forEach((inputRadio) => {
+      inputRadio.addEventListener('input', recalculate)
+    })
 }
