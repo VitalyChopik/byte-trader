@@ -189,12 +189,6 @@
             content: none;
           }
         }
-        .attached__block {
-          display: none;
-          &.active {
-            display: block;
-          }
-        }
       }
       &-wrapper {
         width: 50%;
@@ -269,5 +263,11 @@
         }
       }
     }
+  }
+}
+.attached__block {
+  display: none;
+  &._active {
+    display: block;
   }
 }
