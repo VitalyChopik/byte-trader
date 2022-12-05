@@ -1,274 +1,273 @@
-.challenges{
-    &__section {
-        margin-bottom: rem(160);
-        @include media(990) {
-            margin-bottom: rem(72);
-        }
+.challenges {
+  &__section {
+    margin-bottom: rem(160);
+    @include media(990) {
+      margin-bottom: rem(72);
     }
-    // заголовок
-    &__title {
-        font-weight: 500;
-        font-size: 48px;
-        line-height: 120%;
-        margin-bottom: rem(16);
-        text-align: center;
-        @include media(990) {
-            font-size: 32px;
-            line-height: 130%;
-            margin-bottom: rem(12);
-        }
+  }
+  // заголовок
+  &__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    margin-bottom: rem(16);
+    text-align: center;
+    @include media(990) {
+      font-size: 32px;
+      line-height: 130%;
+      margin-bottom: rem(12);
     }
-    // подзаголовок
-    &__subtitle {
-        font-weight: 400;
+  }
+  // подзаголовок
+  &__subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: center;
+    max-width: 970px;
+    margin: 0 auto rem(48);
+    @include media(990) {
+      font-size: 16px;
+      line-height: 160%;
+      margin-bottom: rem(32);
+    }
+  }
+  // общий блок для содержащий контент
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  // блок с планами
+  &__tabs-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(48);
+    @include media(990) {
+      flex-wrap: wrap;
+      margin-bottom: rem(16);
+    }
+  }
+  // .challenges__label
+  &__label {
+    input {
+      display: none;
+      &:checked + .challenges__tabs-plan, 
+      &:checked + .challenges__tabs-deposit {
+        background: #514df3;
+      }
+    }
+  }
+  // кнопки планов
+  &__tabs-plan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1d1d28;
+    border-radius: 30px;
+    padding: 8px 24px 8px 8px;
+    height: 64px;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: $standartTrans;
+    @include media(600) {
+      width: 100%;
+      justify-content: start;
+      margin-bottom: rem(16);
+    }
+    img {
+      flex: 0 0 48px;
+      margin-right: 20px;
+      @include media(600) {
+        margin-right: 8px;
+      }
+    }
+    span {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      @include media(600) {
         font-size: 20px;
-        line-height: 160%;
-        text-align: center;
-        max-width: 970px;
-        margin: 0 auto rem(48);
-        @include media(990) {
+        line-height: 26px;
+      }
+    }
+  }
+  // блок с ценами
+  &__tabs-capital {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: rem(40);
+    @include media(990) {
+      justify-content: start;
+      margin-bottom: rem(32);
+    }
+    .text {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 160%;
+      margin-right: 16px;
+      @include media(990) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &__tabs-deposits {
+    display: flex;
+    align-items: center;
+    @include media(990) {
+      overflow-x: scroll;
+      justify-content: start;
+      width: 100%;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  // кнопки с ценами
+  &__tabs-deposit {
+    background: #1d1d28;
+    border-radius: 30px;
+    padding: 8px 24px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: $standartTrans;
+    @include media(990) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  // Таблицы
+  &__tabs-content {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: rem(60);
+    @include media(990) {
+      margin-bottom: rem(32);
+    }
+    .content {
+      &__block {
+        width: 100%;
+        position: relative;
+        display: none;
+        &.active {
+          display: block;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          background: rgba(15, 18, 30, 0.2);
+          backdrop-filter: blur(100px);
+          border-radius: 12px;
+          width: 400px;
+          right: 0;
+          top: -16px;
+          bottom: -16px;
+          z-index: -1;
+          @include media(990) {
+            content: none;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          border-radius: 12px;
+          width: 400px;
+          right: 0;
+          top: -16px;
+          bottom: -16px;
+          z-index: 1;
+          border: 1px solid #131329;
+          @include media(990) {
+            content: none;
+          }
+        }
+        .attached__block {
+          display: none;
+          &.active {
+            display: block;
+          }
+        }
+      }
+      &-wrapper {
+        width: 50%;
+        // border-right: 1px solid #131329;
+        padding: 15px 12px 15px 0px;
+        cursor: pointer;
+        @include media(600) {
+          width: 100%;
+          padding: 0;
+          padding-bottom: 8px;
+        }
+        .title {
+          display: flex;
+          justify-content: space-between;
+          span {
+            font-weight: 500;
             font-size: 16px;
             line-height: 160%;
-            margin-bottom: rem(32);
+          }
+          svg {
+            width: 20px;
+            transform: rotate(180deg);
+            transition: all 0.5s ease-in-out;
+          }
         }
-    }
-    // общий блок для содержащий контент
-    &__block {
+        .text {
+          max-height: 0;
+          overflow: hidden;
+          span {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 130%;
+          }
+        }
+        &.active {
+          .text {
+            margin-top: 8px;
+            max-height: 100%;
+          }
+          .title {
+            svg {
+              transform: rotate(0deg);
+            }
+          }
+        }
+      }
+      &__box {
         display: flex;
-        flex-direction: column;
         align-items: center;
-    }
-    // вкладки
-    &__tabs {
-        // блок с планами
-        &-select {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: rem(48);
-            @include media(990) {
-                flex-wrap: wrap;
-                margin-bottom: rem(16);
-            }
+        justify-content: space-between;
+        border-bottom: 1px solid #131329;
+        @include media(600) {
+          flex-direction: column;
+          align-items: start;
+          padding: 16px 0px;
         }
-        // кнопки планов
-        &-plan {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #1D1D28;
-            border-radius: 30px;
-            padding: 8px 24px 8px 8px;
-            height: 64px;
-            margin: 0 6px;
-            cursor: pointer;
-            img {
-                max-width: 48px;
-                margin-right: 20px;
-                @include media(600) {
-                    margin-right: 8px;
-                 }
-            }
-            span {
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 31px;
-                @include media(600) {
-                    font-size: 20px;
-                    line-height: 26px;
-                 }
-            }
-            &.active {
-                background: #514DF3;  
-            }
+        .value {
+          width: 50%;
+          text-align: center;
+          @include media(600) {
+            width: 100%;
+            text-align: left;
+          }
+          span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
             @include media(600) {
-               width: 100%;
-               justify-content: start;
-               margin-bottom: rem(16);
+              font-weight: 700;
             }
+          }
         }
-        // блок с ценами
-        &-capital {
-            display: flex;
-            align-items: center;
-            margin-bottom: rem(40);
-            position: relative;
-            flex-wrap: wrap;
-            width: 100%;
-            .text {
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 160%;
-                margin-right: 10px;
-                @include media (990){
-                    margin-bottom: 16px;
-                }
-            }
-            @include media (990){
-                justify-content: start;
-                margin-bottom: rem(32);
-            }
-        }
-        &-deposits {
-            display: none;
-            align-items: center;
-            margin-left: -6px;
-            @include media (990){
-                overflow-x: scroll;
-                justify-content: start;
-                width: 100%;
-                &::-webkit-scrollbar {
-                    width: 0;
-                  }
-            }
-            &.active {
-                display: flex;
-            }
-        }
-        // кнопки с ценами
-        &-deposit {
-            background: #1D1D28;
-            border-radius: 30px;
-            padding: 8px 24px;
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 31px;
-            margin: 0 6px;
-            cursor: pointer;
-            &.active {
-                background: #514DF3;
-            }
-            @include media (990){
-                font-size: 20px;
-                line-height: 26px;
-            }
-        }
-        // Таблицы
-        &-content {
-            margin-bottom: rem(60);
-            max-width: 800px;
-            width: 100%;
-            @include media (990){
-                margin-bottom: rem(32);
-            }
-            .content {
-                &__block {
-                    width: 100%;
-                    position: relative;
-                    &::before {
-                        content:"";
-                        position: absolute;
-                        background: rgba(15, 18, 30, 0.2);
-                        backdrop-filter: blur(100px);
-                        border-radius: 12px;
-                        width: 400px;
-                        right: 0;
-                        top: -16px;
-                        bottom: -16px;
-                        z-index: -1;
-                        @include media(990) {
-                            content: none;
-                        }
-                    }
-                    &::after {
-                        content:"";
-                        position: absolute;
-                        border-radius: 12px;
-                        width: 400px;
-                        right: 0;
-                        top: -16px;
-                        bottom: -16px;
-                        z-index: 1;
-                        border: 1px solid #131329;
-                        @include media(990) {
-                            content: none;
-                        }
-                    }
-                    display: none;
-                    &.active {
-                        display: block;
-                    }
-                    .attached__block {
-                        display: none;
-                        &.active {
-                            display: block;
-                        }
-                    }
-                }
-                &-wrapper {
-                    width: 50%;
-                    // border-right: 1px solid #131329;
-                    padding: 15px 12px 15px 0px;
-                    cursor: pointer;
-                    @include media(600) {
-                        width: 100%;
-                        padding: 0;
-                        padding-bottom: 8px;
-                    } 
-                    .title {
-                        display: flex;
-                        justify-content: space-between;
-                        span {
-                            font-weight: 500;
-                            font-size: 16px;
-                            line-height: 160%;
-                        }
-                        svg {
-                            width: 20px;
-                            transform: rotate(180deg);
-                            transition: all 0.5s ease-in-out;
-                        }
-                    }
-                    .text {
-                        max-height: 0;
-                        overflow: hidden;
-                        span {
-                            font-weight: 400;
-                            font-size: 12px;
-                            line-height: 130%;
-                            
-                        }
-                    }
-                    &.active {
-                        .text {
-                            margin-top: 8px;
-                            max-height: 100%;
-                        }
-                        .title {
-                            svg {
-                                transform: rotate(0deg);
-                            }
-                        }
-                    }
-                }
-                &__box {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    border-bottom: 1px solid #131329;
-                    @include media(600) {
-                        flex-direction: column;
-                        align-items: start;
-                        padding: 16px 0px;
-                    }
-                    .value {
-                        width: 50%;
-                        text-align: center;
-                        @include media(600) {
-                            width: 100%;
-                            text-align: left;
-                        }   
-                        span {
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 160%; 
-                            @include media(600) {
-                               font-weight: 700;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }

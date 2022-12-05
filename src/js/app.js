@@ -1,5 +1,5 @@
-
-import { isWebp, headerFixed }from './modules'
+import { isWebp, headerFixed } from './modules'
+import investmentDataMapping from './modules/investmentDataMapping'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -22,45 +22,47 @@ isWebp()
 // element.scrollIntoView({
 //     behavior: 'smooth'
 // })
-let accordion = document.querySelector('.challenges__section');
-let items = accordion.querySelectorAll('.content-wrapper');
-let title = accordion.querySelectorAll('.content-wrapper .title');
+const accordion = document.querySelector('.challenges__section')
+const items = accordion.querySelectorAll('.content-wrapper')
+const title = accordion.querySelectorAll('.content-wrapper .title')
 function toggleAccordion() {
-    let thisItem = this.parentNode;
-    
-    items.forEach(item => {
-      if (thisItem == item ) {
-        // if this item is equal to the clicked item, open it.
-        thisItem.classList.toggle('active');
-        return;
-      } 
-      // otherwise, remove the open class
-      item.classList.remove('active');
-    });
-  }
-  
-  title.forEach(question => question.addEventListener('click', toggleAccordion));
+  const thisItem = this.parentNode
 
-//   табы 
-  const tabsBtn = document.querySelectorAll(".challenges__tabs-plan")
-  const tabsItems = document.querySelectorAll(".challenges__tabs-content .content__block")
-  tabsBtn.forEach(function(item){
-    item.addEventListener("click", function(){
-        let currentBtn = item
-        let tabId = currentBtn.getAttribute("data-tab")
-        let currentTab = document.querySelector(tabId)
-        if ( ! currentBtn.classList.contains('active')){
-            tabsBtn.forEach(function(item){
-                item.classList.remove('active')
-                currentTab.classList.remove('active')
-            })
-            tabsItems.forEach(function(item){
-                item.classList.remove('active')
-            })
-            currentBtn.classList.add('active')
-            currentTab.classList.add('active')
-        }
-
-    })
+  items.forEach((item) => {
+    if (thisItem === item) {
+      // if this item is equal to the clicked item, open it.
+      thisItem.classList.toggle('active')
+      return
+    }
+    // otherwise, remove the open class
+    item.classList.remove('active')
   })
-  document.querySelector('.challenges__tabs-plan').click()
+}
+
+title.forEach((question) => question.addEventListener('click', toggleAccordion))
+
+const investmentСalculationForm = document.querySelector('.challenges__block')
+
+if (investmentСalculationForm) {
+  const recalculate = () => {
+    const category = investmentСalculationForm.querySelector('input[name="category"]:checked').value
+    const capital = investmentСalculationForm.querySelector('input[name="capital"]:checked').value
+    const investmentTables = investmentСalculationForm.querySelectorAll(`[data-table]`)
+    const investmentData = investmentDataMapping[category][capital]
+
+    console.log(investmentData);
+
+    for (const key in investmentData) {
+      const investmentTable = investmentСalculationForm.querySelector(`[data-table="${investmentData[key]}"]`)
+
+      investmentTables.forEach((table) => table.style.display = 'none')
+      investmentTable.style.display = 'block'
+    }
+  }
+
+  recalculate()
+
+  investmentСalculationForm.querySelectorAll('input[type="radio"]').forEach((inputRadio) => {
+    inputRadio.addEventListener('input', recalculate)
+  })
+}
