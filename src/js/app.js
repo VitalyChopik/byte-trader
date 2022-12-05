@@ -64,7 +64,5 @@ if (investmentСalculationForm) {
 
   investmentСalculationForm
     .querySelectorAll('input[type="radio"]')
-    .forEach((inputRadio) => {
-      inputRadio.addEventListener('input', recalculate)
-    })
+    .forEach((inputRadio) => inputRadio.addEventListener('input', recalculate))
 }
