@@ -1336,6 +1336,12 @@ body .lock {
   margin-bottom: 3rem;
 }
 
+.challenges__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .challenges__label input {
   display: none;
 }
