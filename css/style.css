@@ -1391,13 +1391,17 @@ body .lock {
 }
 
 .challenges__tabs-deposits {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-left: -6px;
+}
+
+.challenges__tabs-deposits.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .challenges__tabs-deposit {
