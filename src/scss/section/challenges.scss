@@ -110,7 +110,7 @@
             }
         }
         &-deposits {
-            display: flex;
+            display: none;
             align-items: center;
             margin-left: -6px;
             @include media (990){
@@ -120,6 +120,9 @@
                 &::-webkit-scrollbar {
                     width: 0;
                   }
+            }
+            &.active {
+                display: flex;
             }
         }
         // кнопки с ценами
