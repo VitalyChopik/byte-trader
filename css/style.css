@@ -356,23 +356,6 @@ body .lock {
   text-decoration: underline;
 }
 
-.form input[type=submit] {
-  margin-left: auto;
-  background: #F8DF55;
-  border-radius: 100px;
-  padding: 24px 40px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 18px;
-  color: #04040C;
-  max-height: 100%;
-  cursor: pointer;
-}
-
-.form input[type=submit]:hover {
-  text-decoration: underline;
-}
-
 .user__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1491,14 +1474,6 @@ body .lock {
   border: 1px solid #131329;
 }
 
-.challenges__tabs-content .content__block .attached__block {
-  display: none;
-}
-
-.challenges__tabs-content .content__block .attached__block.active {
-  display: block;
-}
-
 .challenges__tabs-content .content-wrapper {
   width: 50%;
   padding: 15px 12px 15px 0px;
@@ -1574,6 +1549,14 @@ body .lock {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
+}
+
+.attached__block {
+  display: none;
+}
+
+.attached__block._active {
+  display: block;
 }
 
 @media (max-width: 1366.98px) {
@@ -2102,17 +2085,6 @@ body .lock {
   }
 
   .form-submit {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0;
-    bottom: -72px;
-    height: 56px;
-    padding: 0;
-  }
-
-  .form input[type=submit] {
     position: absolute;
     left: 0;
     right: 0;
