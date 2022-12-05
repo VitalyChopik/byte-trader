@@ -51,6 +51,7 @@
   }
   // .challenges__label
   &__label {
+    display: flex;
     input {
       display: none;
       &:checked + .challenges__tabs-plan, 
