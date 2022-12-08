@@ -17,7 +17,7 @@ export const html = () => {
     .pipe(htmlMin({
       useShortDoctype: true,
       sortClassName: true,
-      collapseWhitespace: app.isBuild,
+      collapseWhitespace: false,
       removeComments: app.isBuild
     }))
     .pipe(app.plugins.if(app.isBuild, versionNumber({

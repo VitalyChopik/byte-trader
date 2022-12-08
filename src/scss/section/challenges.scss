@@ -154,43 +154,6 @@
       margin-bottom: rem(32);
     }
     .content {
-      &__block {
-        width: 100%;
-        position: relative;
-        display: none;
-        &.active {
-          display: block;
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          background: rgba(15, 18, 30, 0.2);
-          backdrop-filter: blur(100px);
-          border-radius: 12px;
-          width: 400px;
-          right: 0;
-          top: -16px;
-          bottom: -16px;
-          z-index: -1;
-          @include media(990) {
-            content: none;
-          }
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          border-radius: 12px;
-          width: 400px;
-          right: 0;
-          top: -16px;
-          bottom: -16px;
-          z-index: 1;
-          border: 1px solid #131329;
-          @include media(990) {
-            content: none;
-          }
-        }
-      }
       &-wrapper {
         width: 50%;
         // border-right: 1px solid #131329;
@@ -257,9 +220,19 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 160%;
+            position: relative;
             @include media(600) {
               font-weight: 700;
             }
+          }
+          .sale {
+            margin: 0 5px;
+            color: #F8DF55;
+          }
+          .nosale {
+            margin: 0 5px;
+            text-decoration-line: line-through;
+            color: #B0B1B7;
           }
         }
       }
@@ -270,5 +243,35 @@
   display: none;
   &._active {
     display: block;
+  }
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: rgba(15, 18, 30, 0.2);
+    backdrop-filter: blur(100px);
+    border-radius: 12px;
+    width: 400px;
+    right: 0;
+    top: -16px;
+    bottom: -16px;
+    z-index: -1;
+    @include media(990) {
+      content: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 12px;
+    width: 400px;
+    right: 0;
+    top: -16px;
+    bottom: -16px;
+    z-index: 1;
+    border: 1px solid #131329;
+    @include media(990) {
+      content: none;
+    }
   }
 }
