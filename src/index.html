@@ -21,7 +21,7 @@
               Get up to $250,000 in funds. <br>We cover the risk, and you keep 80% of the profit
             </h2>
             <div class="head__form form">
-              <form action="#">
+              <form data-send-form>
                 <img src="images/icons/mail-input.svg" alt="">
                 <input type="email" class="form-control" placeholder="Enter your email">
                 <input type="submit" class="form-submit" value="Join waitlist now">
@@ -919,6 +919,10 @@
         </div>
       </div>
     </main>
+    <form class="test-form" id="participation_form">
+      <input type="email" id="email" placeholder="Email">
+      <button type="submit">Введите Email</button>
+    </form>
     @@include('html/footer.html', {})
   </div>
   @@include('html/script.html', {})
