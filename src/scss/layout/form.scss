@@ -70,4 +70,29 @@
             padding: 0;
         }
     }
+    input[type=submit] {
+        margin-left: auto;
+        background: #F8DF55;
+        border-radius: 100px;
+        padding: 24px 40px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 18px;
+        color: #04040C;
+        max-height: 100%;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+        @include media (600) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            margin: 0;
+            bottom: -72px;
+            height: 56px;
+            padding: 0;
+        }
+    }
 }

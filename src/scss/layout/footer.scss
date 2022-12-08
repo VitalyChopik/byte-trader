@@ -50,6 +50,7 @@
     }
     &-link {
       margin-left: rem(40);
+      display: flex;
       @include media (1200){
         margin-left: rem(20);
       }
@@ -77,7 +78,7 @@
       justify-content: space-between;
       margin-bottom: rem(16);
     }
-    .link {
+    .privacy-policy-link {
       font-size: 12px;
       line-height: 120%;
       margin-right: rem(16);

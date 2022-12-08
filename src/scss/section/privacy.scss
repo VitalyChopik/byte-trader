@@ -1,0 +1,110 @@
+.privacy {
+    &__content {
+        margin-bottom: rem(40);
+        @include media(990) {
+            flex-direction: column;
+            margin-bottom: rem(16);
+        }
+    }
+    &__logo {
+        margin: 0 auto rem(48);
+        display: flex;
+        justify-content: center;
+        max-width: 200px;
+        @include media(990) {
+            max-width: 140px;
+            margin-bottom: rem(40);
+        }
+        a {
+            max-width: 100%;
+            height: auto;
+            img {
+                height: auto;
+                max-width: 100%;
+            }   
+        }
+    }
+    &__title {
+        font-size: 74px;
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: rem(120);
+        @include media(990) {
+            font-size: 44px;
+            line-height: 120%;
+            margin-bottom: rem(64);
+        }
+    }
+    &__block {
+        .wp-block-columns {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: rem(80);
+            @include media(990) {
+                flex-direction: column;
+                margin-bottom: rem(64);
+            }
+            .wp-block-column {
+                h2 {
+                    font-size: 28px;
+                    line-height: 130%;
+                    @include media(990) {
+                        font-size: 24px;
+                        line-height: 130%;
+                        margin-bottom: rem(16);
+                    }
+                }
+                h3 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 160%;
+                    margin-bottom: rem(32);
+                    @include media(990) {
+                        font-size: 18px;
+                        line-height: 160%;
+                        margin-bottom: rem(29);
+                    }
+                }
+                h4 {
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 160%;
+                    margin-bottom: rem(32);
+                    @include media(990) {
+                        font-size: 16px;
+                        line-height: 160%;
+                        margin-bottom: rem(26);
+                    }
+                }
+                p {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 160%;
+                    margin-bottom: rem(32);
+                    @include media(990) {
+                        font-size: 16px;
+                        line-height: 160%;
+                        margin-bottom: rem(26);
+                    }
+                    a {
+                        text-decoration: underline;
+                        color: #ffffff;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                &:first-child {
+                    min-width: 370px;
+                    max-width: 370px;
+                    margin-right: 30px;
+                    @include media(990) {
+                        max-width: 100%;
+                        margin-right: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
