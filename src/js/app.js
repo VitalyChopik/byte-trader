@@ -66,3 +66,29 @@ if (investmentСalculationForm) {
     .querySelectorAll('input[type="radio"]')
     .forEach((inputRadio) => inputRadio.addEventListener('input', recalculate))
 }
+
+const sendingMailForms = document.querySelectorAll('[data-send-form]')
+
+sendingMailForms.forEach((form) => {
+  form.addEventListener('submit', resendEmailToForm)
+})
+
+function resendEmailToForm(e) {
+  e.preventDefault()
+
+  const inputValue = this.querySelector('input').value
+  const formForResend = document.getElementById('participation_form')
+  const inputResend = formForResend.querySelector('input')
+  const buttonResend = formForResend.querySelector('button')
+
+  inputResend.value = inputValue
+  buttonResend.click()
+}
+
+const testForm = document.querySelector('.test-form')
+
+testForm.addEventListener('submit', function (e) {
+  e.preventDefault()
+
+  alert(this.querySelector('input').value)
+})
