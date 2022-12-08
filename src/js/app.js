@@ -66,3 +66,20 @@ if (investmentСalculationForm) {
     .querySelectorAll('input[type="radio"]')
     .forEach((inputRadio) => inputRadio.addEventListener('input', recalculate))
 }
+
+
+const triggerBtn = document.querySelector(".trigger__form .form-submit")
+const triggerInput = document.querySelector(".trigger__form .form-control")
+const headBtn = document.querySelector(".head__form .form-submit")
+const headInput = document.querySelector(".head__form .form-control")
+const rightInput = document.querySelector('.participation .form-control')
+const rightBtn = document.querySelector('.participation .participation-submit')
+headBtn.addEventListener("click", () => {
+    rightInput.value = headInput
+    rightBtn.click()
+});
+triggerBtn.addEventListener("click", () => {
+  rightInput.value = triggerInput
+  rightBtn.click()
+});
+

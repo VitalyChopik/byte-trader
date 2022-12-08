@@ -118,7 +118,7 @@
                               <?php endif; ?>
                             <h3><?php the_sub_field('box-title')?></h3>
                             <p><?php the_sub_field('box-subtitle')?></p>
-                            <a href="#" class="join-btn btn">Join waitlist now</a>
+                            <a href="#trigger" class="join-btn btn">Join waitlist now</a>
                           </div>
                         
                           <?php
@@ -350,7 +350,7 @@
                 endif;
                 ?>
                 
-                <a href="#" class="join-btn challenges__tabs-btn">Join waitlist </a>
+                <a href="#trigger" class="join-btn challenges__tabs-btn">Join waitlist </a>
               </form>
             </div>
           </div>
@@ -417,7 +417,7 @@
           if( have_rows('trigger') ):
               while( have_rows('trigger') ) : the_row();
               ?>
-              <div class="trigger__section">
+              <div class="trigger__section" id="trigger">
                 <div class="trigger__container">
                   <div class="trigger__block">
                     <h2 class="trigger__title"><?php the_sub_field('title')?></h2>
@@ -534,4 +534,5 @@
               endwhile;
           endif;
         ?>  
+            <?php echo do_shortcode('[vl_form widget='.'embedForm2'.']')?>
 <?php get_footer();?>
