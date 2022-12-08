@@ -95,3 +95,13 @@
     }
   }
 }
+
+.test-form {
+  position: fixed;
+  bottom: 10px;
+  background-color: red;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 40px;
+}

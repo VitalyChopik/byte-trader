@@ -68,18 +68,20 @@ if (investmentСalculationForm) {
 }
 
 
-const triggerBtn = document.querySelector(".trigger__form .form-submit")
-const triggerInput = document.querySelector(".trigger__form .form-control")
-const headBtn = document.querySelector(".head__form .form-submit")
-const headInput = document.querySelector(".head__form .form-control")
-const rightInput = document.querySelector('.participation .form-control')
-const rightBtn = document.querySelector('.participation .participation-submit')
-headBtn.addEventListener("click", () => {
-    rightInput.value = headInput
-    rightBtn.click()
-});
-triggerBtn.addEventListener("click", () => {
-  rightInput.value = triggerInput
-  rightBtn.click()
-});
+const sendingMailForms = document.querySelectorAll('[data-send-form]')
 
+sendingMailForms.forEach((form) => {
+  form.addEventListener('submit', resendEmailToForm)
+})
+
+function resendEmailToForm(e) {
+  e.preventDefault()
+
+  const inputValue = this.querySelector('input').value
+  const formForResend = document.getElementById('participation_form')
+  const inputResend = formForResend.querySelector('input')
+  const buttonResend = formForResend.querySelector('button')
+
+  inputResend.value = inputValue
+  buttonResend.click()
+}
