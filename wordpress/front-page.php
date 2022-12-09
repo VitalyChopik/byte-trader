@@ -534,5 +534,5 @@
               endwhile;
           endif;
         ?>  
-            <?php echo do_shortcode('[vl_form widget='.'embedForm2'.']')?>
+           
 <?php get_footer();?>

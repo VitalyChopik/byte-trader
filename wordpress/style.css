@@ -3,3 +3,30 @@
  *
  * Version:     1.0
  */
+
+ @media (max-width: 600px) {
+    .widget-container .box {
+        margin-bottom: 80px;
+    }
+    .form-group:before {
+        width: 22px;
+        height: 18px;
+    }
+    .participation-submit {
+        position: absolute;
+        left: 0;
+        right: 0;
+        min-width: 100%;
+        width: 100%;
+        margin: 0;
+        bottom: -72px;
+        height: 56px;
+        padding: 0;
+        z-index: 1;
+    }
+    .participation .form-control {
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 5px;
+    }
+}

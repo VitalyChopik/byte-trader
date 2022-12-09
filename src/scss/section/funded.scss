@@ -41,6 +41,10 @@
         margin-bottom: rem(30);
         padding: 40px;
         position: relative;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+        }
         @include media (990) {
             width: 100%;
             margin-bottom: rem(16);

@@ -70,7 +70,7 @@
                 }
             }
             &.user-5 {
-                bottom: -16.67vh;
+                bottom: -14.67vh;
                 right: 20px;
                 @include media(1200) {
                     bottom: -10.44vh;
@@ -154,7 +154,7 @@
     }
     &__scroll {
         max-width: 294px;
-        margin: 0 auto rem(53);
+        margin: 0 auto rem(83);
         display: flex;
         animation: down 1.5s infinite;
         @include media(600) {   
