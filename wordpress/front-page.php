@@ -72,7 +72,10 @@
                   <lottie-player src="<?php echo get_template_directory_uri() ?>/files/Crypto.json" mode="normal" loop autoplay></lottie-player>
                 </div>
                 <div class="work__people">
-                  <picture><source srcset="<?php echo get_template_directory_uri() ?>/images/work/people.webp" type="image/webp"><img src="images/work/people.png" alt=""></picture>
+                  <video muted="" autoplay="" loop="" poster="<?php echo get_template_directory_uri() ?>/images/work/people.png" class="video" >
+                    <source type="video/webm" src="https://www.bytetrader.io/wp-content/uploads/2022/12/Traider.webm">
+                    <source type="video/mp4" src="https://www.bytetrader.io/wp-content/uploads/2022/12/Traider.mp4">
+                  </video>
                 </div>
                 <div class="work__setting-img">
                   <img src="<?php echo get_template_directory_uri() ?>/images/work/setting.svg" alt="">
@@ -424,16 +427,27 @@
                     <h3 class="trigger__subtitle"><?php the_sub_field('subtitle')?></h3>
                     <?php echo get_template_part( 'template-parts/content', 'form', ['class-form'=>'trigger__form']);?>
                     <div class="trigger__box">
-                      <p class="text"><?php the_sub_field('text_1')?></p>
-                      <span class="line"></span>
-                      <p class="text"><?php the_sub_field('text_2')?></p>
+                      <p class="text">
+                        <?php $image1 = get_sub_field('image1');
+                            if( !empty( $image1 ) ): ?>
+                                  <img src="<?php echo esc_url($image1['url']); ?>" alt="<?php echo esc_attr($image1['alt']); ?>"  />
+                            <?php endif; ?>
+                        <span><?php the_sub_field('text_1')?></span>
+                      </p>
+                      <p class="text">
+                          <?php $image2 = get_sub_field('image2');
+                            if( !empty( $image2 ) ): ?>
+                                  <img src="<?php echo esc_url($image2['url']); ?>" alt="<?php echo esc_attr($image2['alt']); ?>"  />
+                            <?php endif; ?>
+                        <span><?php the_sub_field('text_2')?></span>
+                      </p>
                     </div>
                     <div class="user__box user-1">
-                      <picture><source srcset="<?php echo get_template_directory_uri() ?>/images/icons/join-user-1.webp" type="image/webp"><img src="<?php echo get_template_directory_uri() ?>/images/icons/join-user-1.png" alt=""></picture>
+                      <img src="<?php echo get_template_directory_uri() ?>/images/icons/join-user-1.png" alt="">
                       <div class="quote">Join our community</div>
                     </div>
                     <div class="user__box user-2">
-                      <picture><source srcset="<?php echo get_template_directory_uri() ?>/images/icons/join-user-2.webp" type="image/webp"><img src="<?php echo get_template_directory_uri() ?>/images/icons/join-user-2.png" alt=""></picture>
+                    <img src="<?php echo get_template_directory_uri() ?>/images/icons/join-user-2.png" alt="">
                       <div class="quote">Hey, we are waiting for you</div>
                     </div>
                   </div>

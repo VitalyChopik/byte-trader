@@ -1,4 +1,39 @@
 .work {
+    &__section {
+        position: relative;
+        overflow: hidden;
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            background: #514DF3;
+            opacity: 0.2;
+            filter: blur(100px);
+            width: 432px;
+            height: 432px;
+            z-index: -1;
+            @include media (990) {
+                width: 304px;
+                height: 304px;
+            }
+        }
+        &::before {
+            top: 65px;
+            left: -54px;
+            @include media (990) {
+                top: 780px;
+                left: auto;
+                right: -112px;
+            }
+        }
+        &::after {
+            top: -26px;
+            right: -115px;
+            @include media (990) {
+                top: -375px;
+                right: -124px;
+            }
+        }
+    }
     &__block {
         display: flex;
         justify-content: space-between;
@@ -16,6 +51,8 @@
         height: 480px;
         padding: 14px 24px 0 0;
         position: relative;
+        margin-bottom: 2px;
+        margin-left: 2px;
         // overflow: hidden;
         &::before {
                 content: "";
@@ -33,7 +70,7 @@
             height: 343px;
             border-radius: 8.575px;
             padding: 0 17px;
-            margin: 0 auto rem(24);
+            margin: rem(2) auto rem(24);
         }
     }
     &__logo {
@@ -72,14 +109,11 @@
         position: absolute;
         bottom: -0;
         left: -0;
-        
-        img {
-            max-width: 100%;
+        .video {
             border-radius: 12px;
-        }
-        picture { 
+            max-height: 380px;
+            margin-left: 40px;
             @include media(990) {
-                max-width: 260px;
                 max-height: 260px;
             }
         }

@@ -24,10 +24,7 @@
     }
     &__box {
         overflow: hidden;
-        transition: all 0.5s ease-in-out;
-        &:hover {
-            transform: scale(1.05);
-        }
+
         &.big-box {
             max-width: 560px;
             margin-bottom: rem(40);
@@ -47,6 +44,10 @@
             }
             img {
                 width: 100%;
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
             &:nth-child(2) {
                 max-width: 580px;
@@ -63,6 +64,10 @@
             justify-content: center;
             flex-direction: column;
             text-align: center;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
             @include media(990) {
                 max-width: 350px;
                 margin: 0 auto rem(24);

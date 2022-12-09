@@ -22,6 +22,37 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        background: #514DF3;
+        opacity: 0.4;
+        filter: blur(100px);
+        width: 252px;
+        height: 252px;
+        z-index: -1;
+    }
+    &::before {
+        top: -74px;
+        left: -36px;
+        @include media (990) {
+            top: 54;
+            left: auto;
+            right: -115px;
+        }
+    }
+    &::after {
+        width: 182px;
+        height: 182px;
+        bottom: -113px;
+        right: -44px;
+        @include media (990) {
+            bottom:-182px;
+            right: auto;
+            left: -182px
+        }
+    }
     
   }
   &__logo {
@@ -68,6 +99,11 @@
         max-width: 29px;
         width: 100%;
         height: 29px;
+        transition: all 0.3s ease-in-out;
+      }
+      transition: all 0.3s ease-in-out;
+      &:hover img {
+          transform: rotate(45deg);
       }
     }
   }
