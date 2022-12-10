@@ -2,6 +2,8 @@
     &__section {
         position: relative;
         overflow: hidden;
+        padding-top: 60px;
+        margin-top: -60px;
         &::before, &::after {
             content: "";
             position: absolute;

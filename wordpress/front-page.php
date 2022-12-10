@@ -1,7 +1,7 @@
 <?php get_header();?>
       
   <!-- section -->
-      <div class="head__section">
+      <div class="head__section" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000">
         <div class="head__container">
           <div class="head__logo">
             <?php 
@@ -72,7 +72,7 @@
                   <lottie-player src="<?php echo get_template_directory_uri() ?>/files/Crypto.json" mode="normal" loop autoplay></lottie-player>
                 </div>
                 <div class="work__people">
-                  <video muted="" autoplay="" loop="" poster="<?php echo get_template_directory_uri() ?>/images/work/people.png" class="video" >
+                  <video muted autoplay loop poster="<?php echo get_template_directory_uri() ?>/images/work/people.png" class="video" >
                     <source type="video/webm" src="https://www.bytetrader.io/wp-content/uploads/2022/12/Traider.webm">
                     <source type="video/mp4" src="https://www.bytetrader.io/wp-content/uploads/2022/12/Traider.mp4">
                   </video>
@@ -251,7 +251,27 @@
                           ?>
                           <div class="attached__block" data-table="<?php echo $package ?>">
                           <?php
+                            if( have_rows('refundable_fee') ):
+                              while( have_rows('refundable_fee') ) : the_row();
+                              ?>
+                              <div class="refundable__block">
+                                <h3 class="refundable__title">Refundable fee:</h3>
+                                <div class="refundable__box-nosale"><?php the_sub_field('nosale')?></div>
+                                <div class="arrow">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M15.2002 10.9899L13.2302 9.01993L10.0202 5.80993C9.34018 5.13993 8.18018 5.61993 8.18018 6.57993V12.8099V18.4199C8.18018 19.3799 9.34018 19.8599 10.0202 19.1799L15.2002 13.9999C16.0302 13.1799 16.0302 11.8199 15.2002 10.9899Z" fill="white"/>
+                                </svg>
+                                </div>
+                                <div class="refundable__box-sale"><?php the_sub_field('sale')?></div>
+                              </div>
+                              <?php
+                              endwhile;
+                            endif;
+                          ?>
+                          <?php
                             if( have_rows('content_box') ):
+                              ?><div class="attached__block-wrapper">
+                                <?php
                               while( have_rows('content_box') ) : the_row();
                               $box++; // если пост есть, увеличиваем на 1 
                                 switch($box) {            
@@ -281,17 +301,7 @@
 
                                             </div>
                                             <div class="value">
-                                              <?php if(get_sub_field('money')){
-                                                ?>
-                                                
-                                                <span class="nosale"><?php the_sub_field('value_nosale')?></span>
-                                                  <span class="sale"><?php the_sub_field('value_sale')?></span>
-                                                <?php
-                                              } else {
-                                                ?>
                                                   <span><?php the_sub_field('box_value')?></span>
-                                                <?php
-                                              }?>
                                             </div>
                                           </div>
                                         <?php
@@ -322,23 +332,14 @@
 
                                             </div>
                                             <div class="value">
-                                              <?php if(get_sub_field('money')){
-                                                ?>
-                                                
-                                                <span class="nosale"><?php the_sub_field('value_nosale')?></span>
-                                                  <span class="sale"><?php the_sub_field('value_sale')?></span>
-                                                <?php
-                                              } else {
-                                                ?>
                                                   <span><?php the_sub_field('box_value')?></span>
-                                                <?php
-                                              }?>
                                             </div>
                                           </div>
                                     <?php
                                     break;
                                 }
                               endwhile;
+                              ?></div><?php
                             endif;
                           ?>
 
@@ -376,10 +377,17 @@
                           ?>
                           <div class="trading__box big-box">
                             <p><?php the_sub_field('text')?></p>
-                            <?php $image = get_sub_field('image');
-                            if( !empty( $image ) ): ?>
-                                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                            <?php endif; ?>
+                            <?php if (get_sub_field('lottie')){
+                              ?>
+                              <lottie-player src="<?php the_sub_field('lottie_animation')?>" mode="normal" loop autoplay></lottie-player>
+                              <?php
+                            } else {
+                              $image = get_sub_field('image');
+                              if( !empty( $image ) ): ?>
+                                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                              <?php endif; 
+                            }?>
+
                           </div>
                           <?php
                           endwhile;

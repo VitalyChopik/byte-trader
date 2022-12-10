@@ -244,34 +244,86 @@
   &._active {
     display: block;
   }
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    background: rgba(15, 18, 30, 0.2);
-    backdrop-filter: blur(100px);
-    border-radius: 12px;
-    width: 400px;
-    right: 0;
-    top: -16px;
-    bottom: -16px;
-    z-index: -1;
-    @include media(990) {
-      content: none;
+
+  &-wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background: rgba(15, 18, 30, 0.2);
+      backdrop-filter: blur(100px);
+      border-radius: 12px;
+      width: 400px;
+      right: 0;
+      top: -16px;
+      bottom: -16px;
+      z-index: -1;
+      @include media(990) {
+        content: none;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 12px;
+      width: 400px;
+      right: 0;
+      top: -16px;
+      bottom: -16px;
+      z-index: 1;
+      border: 1px solid #131329;
+      @include media(990) {
+        content: none;
+      }
     }
   }
-  &::after {
-    content: "";
-    position: absolute;
-    border-radius: 12px;
-    width: 400px;
-    right: 0;
-    top: -16px;
-    bottom: -16px;
-    z-index: 1;
-    border: 1px solid #131329;
+  
+}
+.refundable {
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 215px;
+    width: 100%;
+    margin: 0 auto rem(48);
     @include media(990) {
-      content: none;
+      max-width: 200px;
+      margin-bottom: rem(32);
+    }
+    svg {
+      max-width: 24px;
+    }
+  }
+  &__title {
+    width: 100%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 160%;
+    text-align: center;
+    margin-bottom: 8px;
+
+  }
+  &__box {
+    &-nosale {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 160%;
+      text-decoration-line: line-through;
+      color: #B0B1B7;
+      @include media(990) {
+        font-size: 28px;
+      }
+    }
+    &-sale {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 160%;
+      color: #F8DF55;
+      @include media(990) {
+        font-size: 28px;
+      }
     }
   }
 }

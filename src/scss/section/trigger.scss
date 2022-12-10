@@ -55,7 +55,7 @@
             &.user-1 {
                 top: rem(-76);
                 left: -6px;
-                animation:  trigger-user-1  6s infinite ease-in-out;
+                animation:  trigger-user-1  10s infinite ease-in-out;
                 @include media (990){
                     max-width: 134px;
                     top: rem(-55);
@@ -87,7 +87,7 @@
                 top: rem(-78);
                 right: rem(91);
                 max-width: 180px;
-                animation:  trigger-user-2  8s infinite ease-in-out;
+                animation:  trigger-user-2  11s infinite ease-in-out;
                 @include media (990){
                     top: rem(-37);
                     right: -11px;
@@ -207,22 +207,41 @@
 @keyframes trigger-user-1 {
     0% {
         top: rem(-76);
+        left: -6px;
+    }
+    35% {
+        left: -6px;
     }
     50% {
-        top: rem(-56);
+        top: rem(-26);
+        left: 26px;
+    }
+    65% {
+        left: -6px;
     }
     100% {
         top: rem(-76);
+
+        left: -6px;
     }
 }
 @keyframes trigger-user-2 {
     0% {
         top: rem(-78);
+        right: -11px;
+    }
+    35% {
+        right: -11px;
     }
     50% {
-        top: rem(-54);
+        top: rem(-24);
+        right: 20px;
+    }
+    65% {
+        right: -11px;
     }
     100% {
         top: rem(-78);
+        right: -11px;
     }
 }

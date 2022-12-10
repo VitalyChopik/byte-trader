@@ -62,3 +62,19 @@ if( function_exists('acf_add_options_page') ) {
     ));
     
 }
+
+add_filter( 'upload_mimes', 'upload_allow_types' );
+function upload_allow_types( $mimes ) {
+
+	// разрешаем новые типы
+	$mimes['lottie']  = 'image/lottie';
+	$mimes['json']  = 'script/json';
+	//$mimes['woff'] = 'font/woff';
+	//$mimes['fb2']  = 'text/xml';
+	//$mimes['epub'] = 'application/epub+zip';
+
+	// запрещаем (отключаем) имеющиеся
+	// unset( $mimes['mp4a'] );
+
+	return $mimes;
+}
