@@ -16,7 +16,7 @@
                 if( have_rows('social', 'option') ):
                     while( have_rows('social', 'option') ) : the_row();
                         ?>
-                        <a href="<?php the_sub_field('link')?>" targer="_blank" class="footer__social-link"><span><?php the_sub_field('social_name')?></span><img src="<?php echo get_template_directory_uri() ?>/images/icons/footer__arrow.svg" alt=""></a>
+                        <a href="<?php the_sub_field('link')?>" target="_blank" class="footer__social-link"><span><?php the_sub_field('social_name')?></span><img src="<?php echo get_template_directory_uri() ?>/images/icons/footer__arrow.svg" alt=""></a>
                         <?php
                     endwhile;
                 endif;
