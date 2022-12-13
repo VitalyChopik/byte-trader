@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.bytetrader.io/wp-content/uploads/2022/12/Badge-3-scaled.jpeg" />
+<meta property="og:url" content="https://www.bytetrader.io/" />
+<meta property="og:title" content="Become a Byte Trader" />
+<meta property="og:description" content="Use our capital to trade crypto. Get up to $250,000 in funds. We cover the risk, and you keep 80% of the profit." />
   <?php wp_head();?>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>

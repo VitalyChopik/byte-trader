@@ -79,6 +79,7 @@
     }
     img {
       flex: 0 0 48px;
+      max-width: 48px;
       margin-right: 20px;
       @include media(600) {
         margin-right: 8px;
