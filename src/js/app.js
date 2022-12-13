@@ -85,3 +85,7 @@ function resendEmailToForm(e) {
   inputResend.value = inputValue
   buttonResend.click()
 }
+
+document.querySelector('.header__close').onclick = function() {
+  document.querySelector('.header').classList.add('d-none');
+}
