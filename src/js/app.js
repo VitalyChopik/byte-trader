@@ -89,3 +89,7 @@ function resendEmailToForm(e) {
 // document.querySelector('.header__close').onclick = function() {
 //   document.querySelector('.header').classList.add('d-none');
 // }
+
+window.addEventListener('load', () => {
+  document.documentElement.classList.add('_loaded')
+})
