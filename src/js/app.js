@@ -86,6 +86,6 @@ function resendEmailToForm(e) {
   buttonResend.click()
 }
 
-document.querySelector('.header__close').onclick = function() {
-  document.querySelector('.header').classList.add('d-none');
-}
+// document.querySelector('.header__close').onclick = function() {
+//   document.querySelector('.header').classList.add('d-none');
+// }

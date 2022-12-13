@@ -2,26 +2,41 @@
 .header {
   width: 100%;
   background: #F8DF55;
-  position: sticky;
+  position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  max-width: 490px;
+  margin-left: auto;
+  border-radius: 0px 0px 0px 20px;
+  z-index: 10;
+  @include media(600) {
+	max-width: 100%;
+	border-radius: 0;
+  }
   &__block {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
-	max-width: 840px;
 	margin: 0 auto;
+	padding: 24px 14.5px;
+	cursor: pointer;
 	@include media(990) {
-		flex-direction: column;
-		align-items: start;
-		height: auto;
-		padding: 16px 0;
+		padding: 5px 16px;
 	}
-  }
-  &__container {
-	position: relative;
+	@include media(600) {
+		
+	  }
+	svg {
+		transition: all 0.3s ease-in-out;
+		@include media(600) {
+			max-width: 200px;
+			display: inline-block;
+		  }
+	}
+	transition: all 0.3s ease-in-out;
+	&:hover svg {
+		transform: rotate(45deg);
+	}
   }
   &__text {
 	font-weight: 400;
@@ -29,40 +44,24 @@
 	line-height: 150%;
 	display: flex;
 	align-items: center;
+	color: #04040C;
 	@include media(990) {
 		font-size: 16px;
-		margin-bottom: 12px;
 	}
+	@include media(600) {
+		max-width: 200px;
+		display: inline-block;
+	  }
 	img {
 		max-height: 18px;
+		margin-left: 5px;
 		@include media(990) {
 			max-height: 16px;
-			margin-left: 5px;
+			
 		}
-	}
-  }
-  &__btn {
-	padding: 12px 40px;
-	border: 1px solid #FFFFFF;
-	border-radius: 50px;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 150%;
-	@include media(990) {
-		font-size: 14px;
-		padding: 9.5px 40px;
-	}
-  }
-  &__close {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	cursor: pointer;
-	@include media(990) {
-		top: 16px;
-		right: 16px;
-		bottom: auto
+		@include media(600) {
+			margin-top: 5px;
+		  }
 	}
   }
   &.d-none {
