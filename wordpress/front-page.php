@@ -46,7 +46,7 @@
             endif;
             ?>
 
-          <img src="<?php echo get_template_directory_uri() ?>/images/scroll-down.svg" alt="" class="head__scroll scroll-down">
+          <img src="<?php echo get_template_directory_uri() ?>/images/scroll-down.png" alt="" class="head__scroll scroll-down">
         </div>
       </div>
       <?php echo get_template_part( 'template-parts/content', 'ticker', ['max-count'=>'10', 'ticker-value'=>'Introducing Byte Trader']);?>
@@ -72,7 +72,7 @@
                   <lottie-player src="<?php echo get_template_directory_uri() ?>/files/Crypto.json" mode="normal" loop autoplay></lottie-player>
                 </div>
                 <div class="work__people">
-                  <video muted autoplay loop poster="<?php echo get_template_directory_uri() ?>/images/work/people.png" class="video" >
+                  <video playsinline="" loop="" autoplay="autoplay" muted="" poster="<?php echo get_template_directory_uri() ?>/images/work/people.png" class="video" >
                     <source type="video/webm" src="https://www.bytetrader.io/wp-content/uploads/2022/12/Traider-1.webm">
                     <source type="video/mp4" src="https://www.bytetrader.io/wp-content/uploads/2022/12/Traider-1.mp4">
                   </video>
