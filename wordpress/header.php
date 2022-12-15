@@ -9,6 +9,23 @@
 <meta property="og:url" content="https://www.bytetrader.io/" />
 <meta property="og:title" content="Become a Byte Trader" />
 <meta property="og:description" content="Use our capital to trade crypto. Get up to $250,000 in funds. We cover the risk, and you keep 80% of the profit." />
+<link rel="canonical" href="https://www.bytetrader.io/"  />
+	<meta property="og:locale" content="en_US"  />
+	<meta property="og:type" content="website"  />
+	<meta property="og:title" content="Become a Byte Trader"  />
+	<meta property="og:description" content="Use our capital to trade crypto. Get up to $250,000 in funds. We cover the risk, and you keep 80% of the profit."  />
+	<meta property="og:url" content="https://www.bytetrader.io/"  />
+	<meta property="og:site_name" content="Byte Trader"  />
+	<meta property="article:modified_time" content="2022-12-13T17:37:10+00:00"  />
+	<meta property="og:image" content="https://www.bytetrader.io/wp-content/uploads/2022/12/Badge-3-scaled.jpeg"  />
+	<meta property="og:image:width" content="1000"  />
+	<meta property="og:image:height" content="525"  />
+	<meta property="og:image:type" content="image/jpeg"  />
+  <meta name="twitter:url" content="https://www.bytetrader.io/"  />
+  <meta name="twitter:card" content="summary_large_image"  />
+	<meta name="twitter:title" content="Become a Byte Trader"  />
+	<meta name="twitter:description" content="Use our capital to trade crypto. Get up to $250,000 in funds. We cover the risk, and you keep 80% of the profit."  />
+	<meta name="twitter:image" content="https://www.bytetrader.io/wp-content/uploads/2022/12/Badge-3-scaled.jpeg"  />
   <?php wp_head();?>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
