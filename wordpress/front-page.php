@@ -1,7 +1,7 @@
 <?php get_header();?>
       
   <!-- section -->
-      <div class="head__section" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000">
+      <div class="head__section" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500">
         <div class="head__container">
           <div class="head__logo">
             <?php 

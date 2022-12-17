@@ -4,16 +4,16 @@
  * Version:     1.0
  */
 
-.header {
+/* .header {
   opacity: 0;
   transform: translateY(-100%);
-  transition: all 800ms ease-in-out 2s;
+  transition: all 800ms ease-in-out 0.5s;
 }
 
 ._loaded .header {
   opacity: 1;
   transform: translateY(0);
-}
+} */
 
 .header__text {
   width: 100%;

@@ -32,7 +32,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500">
       <div class="header__block">
           <a 
               href="https://www.theblock.co/post/130653/crypto-market-maker-byte-trading-raises-7-million-in-seed-funding" 
