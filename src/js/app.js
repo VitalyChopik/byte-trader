@@ -54,7 +54,7 @@ if (investmentСalculationForm) {
     investmentСalculationForm
       .querySelectorAll(`[data-table]`)
       .forEach((table) => table.classList.remove('_active'))
-    
+
     investmentСalculationForm
       .querySelector(`[data-table="${category}-${capital}"]`)
       .classList.add('_active')

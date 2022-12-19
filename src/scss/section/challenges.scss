@@ -1,10 +1,12 @@
 .challenges {
   &__section {
     margin-bottom: rem(160);
+
     @include media(990) {
       margin-bottom: rem(72);
     }
   }
+
   // заголовок
   &__title {
     font-weight: 500;
@@ -12,12 +14,14 @@
     line-height: 120%;
     margin-bottom: rem(16);
     text-align: center;
+
     @include media(990) {
       font-size: 32px;
       line-height: 130%;
       margin-bottom: rem(12);
     }
   }
+
   // подзаголовок
   &__subtitle {
     font-weight: 400;
@@ -26,40 +30,52 @@
     text-align: center;
     max-width: 970px;
     margin: 0 auto rem(48);
+
     @include media(990) {
       font-size: 16px;
       line-height: 160%;
       margin-bottom: rem(32);
     }
   }
+
   // общий блок для содержащий контент
   &__block {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   // блок с планами
   &__tabs-select {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: rem(48);
+
     @include media(990) {
       flex-wrap: wrap;
       margin-bottom: rem(16);
     }
   }
+
   // .challenges__label
   &__label {
     display: flex;
+
+    @include media(600) {
+      width: 100%;
+    }
+
     input {
       display: none;
-      &:checked + .challenges__tabs-plan, 
-      &:checked + .challenges__tabs-deposit {
+
+      &:checked+.challenges__tabs-plan,
+      &:checked+.challenges__tabs-deposit {
         background: #514df3;
       }
     }
   }
+
   // кнопки планов
   &__tabs-plan {
     display: flex;
@@ -72,29 +88,35 @@
     margin: 0 6px;
     cursor: pointer;
     transition: $standartTrans;
+
     @include media(600) {
       width: 100%;
       justify-content: start;
       margin-bottom: rem(16);
     }
+
     img {
       flex: 0 0 48px;
       max-width: 48px;
       margin-right: 20px;
+
       @include media(600) {
-        margin-right: 8px;
+        margin-right: 10px;
       }
     }
+
     span {
       font-weight: 500;
       font-size: 24px;
       line-height: 31px;
+
       @include media(600) {
         font-size: 20px;
         line-height: 26px;
       }
     }
   }
+
   // блок с ценами
   &__tabs-capital {
     width: 100%;
@@ -104,32 +126,39 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: rem(40);
+
     @include media(990) {
       justify-content: start;
       margin-bottom: rem(32);
     }
+
     .text {
       font-weight: 500;
       font-size: 24px;
       line-height: 160%;
       margin-right: 16px;
+
       @include media(990) {
         margin-bottom: 16px;
       }
     }
   }
+
   &__tabs-deposits {
     display: flex;
     align-items: center;
+
     @include media(990) {
-      overflow-x: scroll;
-      justify-content: start;
+      justify-content: space-between;
       width: 100%;
+      margin: 0 -4px;
+
       &::-webkit-scrollbar {
         display: none;
       }
     }
   }
+
   // кнопки с ценами
   &__tabs-deposit {
     background: #1d1d28;
@@ -138,61 +167,94 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 31px;
-    margin: 0 6px;
+    margin: 0 8px;
     cursor: pointer;
     transition: $standartTrans;
+
     @include media(990) {
-      font-size: 20px;
-      line-height: 26px;
+      padding: 8px 12px;
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0 4px;
+    }
+
+    .desktop {
+      @include media (990) {
+        display: none;
+      }
+    }
+
+    .mobile {
+      display: none;
+
+      @include media (990) {
+        display: flex;
+      }
     }
   }
+
   // Таблицы
   &__tabs-content {
     max-width: 800px;
     width: 100%;
     margin-bottom: rem(60);
+
     @include media(990) {
       margin-bottom: rem(32);
     }
+
     .content {
       &-wrapper {
         width: 50%;
         // border-right: 1px solid #131329;
         padding: 15px 12px 15px 0px;
         cursor: pointer;
+
         @include media(600) {
           width: 100%;
           padding: 0;
           padding-bottom: 8px;
+
         }
+
         .title {
           display: flex;
           justify-content: space-between;
+
           span {
             font-weight: 500;
             font-size: 16px;
             line-height: 160%;
+
+            @include media(600) {
+              max-width: 220px;
+            }
           }
+
           svg {
             width: 20px;
             transform: rotate(180deg);
             transition: all 0.5s ease-in-out;
           }
         }
+
         .text {
           max-height: 0;
           overflow: hidden;
+
           span {
             font-weight: 400;
             font-size: 12px;
             line-height: 130%;
           }
         }
+
         &.active {
           .text {
             margin-top: 8px;
             max-height: 100%;
           }
+
           .title {
             svg {
               transform: rotate(0deg);
@@ -200,36 +262,48 @@
           }
         }
       }
+
       &__box {
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid #131329;
+
         @include media(600) {
           flex-direction: column;
           align-items: start;
           padding: 16px 0px;
+          position: relative;
         }
+
         .value {
           width: 50%;
           text-align: center;
+
           @include media(600) {
             width: 100%;
-            text-align: left;
+            text-align: right;
+            right: 32px;
+            position: absolute;
+            z-index: -1;
           }
+
           span {
             font-weight: 400;
             font-size: 16px;
             line-height: 160%;
             position: relative;
+
             @include media(600) {
-              font-weight: 700;
+              font-weight: 400;
             }
           }
+
           .sale {
             margin: 0 5px;
             color: #F8DF55;
           }
+
           .nosale {
             margin: 0 5px;
             text-decoration-line: line-through;
@@ -240,14 +314,17 @@
     }
   }
 }
+
 .attached__block {
   display: none;
+
   &._active {
     display: block;
   }
 
   &-wrapper {
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -259,10 +336,12 @@
       top: -16px;
       bottom: -16px;
       z-index: -1;
+
       @include media(990) {
         content: none;
       }
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -273,13 +352,15 @@
       bottom: -16px;
       z-index: 1;
       border: 1px solid #131329;
+
       @include media(990) {
         content: none;
       }
     }
   }
-  
+
 }
+
 .refundable {
   &__block {
     display: flex;
@@ -289,14 +370,17 @@
     max-width: 215px;
     width: 100%;
     margin: 0 auto rem(48);
+
     @include media(990) {
       max-width: 200px;
       margin-bottom: rem(32);
     }
+
     svg {
       max-width: 24px;
     }
   }
+
   &__title {
     width: 100%;
     font-weight: 500;
@@ -306,6 +390,7 @@
     margin-bottom: 8px;
 
   }
+
   &__box {
     &-nosale {
       font-weight: 700;
@@ -313,15 +398,18 @@
       line-height: 160%;
       text-decoration-line: line-through;
       color: #B0B1B7;
+
       @include media(990) {
         font-size: 28px;
       }
     }
+
     &-sale {
       font-weight: 700;
       font-size: 32px;
       line-height: 160%;
       color: #F8DF55;
+
       @include media(990) {
         font-size: 28px;
       }

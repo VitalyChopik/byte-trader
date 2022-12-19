@@ -224,16 +224,22 @@
                                                 case '1': 
                                                     ?>
                                                     <label class="challenges__label">
-                                                    <input type="radio" name="capital" value="<?php the_sub_field('value')?>" checked="checked">
-                                                    <span class="challenges__tabs-deposit">$<?php the_sub_field('deposit')?></span>
+                                                      <input type="radio" name="capital" value="<?php the_sub_field('value')?>" checked="checked">
+                                                      <span class="challenges__tabs-deposit ">
+                                                        <span class="desktop">$<?php the_sub_field('deposit')?></span>
+                                                        <span class="mobile">$<?php the_sub_field('deposit-mobile')?></span>
+                                                      </span>
                                                     </label>
                                                     <?php
                                                 break;
                                                 default: 
                                                 ?>
                                                     <label class="challenges__label">
-                                                    <input type="radio" name="capital" value="<?php the_sub_field('value')?>">
-                                                    <span class="challenges__tabs-deposit">$<?php the_sub_field('deposit')?></span>
+                                                      <input type="radio" name="capital" value="<?php the_sub_field('value')?>">
+                                                      <span class="challenges__tabs-deposit ">
+                                                        <span class="desktop">$<?php the_sub_field('deposit')?></span>
+                                                        <span class="mobile">$<?php the_sub_field('deposit-mobile')?></span>
+                                                      </span>
                                                     </label>
                                                 <?php
                                                 break;
