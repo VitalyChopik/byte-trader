@@ -1,19 +1,23 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background: #04040C;
   color: #ffffff;
+
   .lock {
     overflow: hidden;
   }
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
   overflow: hidden;
 }
+
 .page {
   position: relative;
   flex: 1 1 auto;
@@ -32,6 +36,7 @@ body {
     padding-top: rem($headerHeight);
   }
 }
+
 [class*="__container"] {
   max-width: rem($containerWidth + $mainOffset * 2);
   margin: 0 auto;

@@ -110,10 +110,13 @@
             &.user-3 {
                 top: 12.33vh;
                 right: -70px;
-                animation: user_3 9s infinite ease-in-out;
+                animation: user_3 14s infinite ease-in-out;
 
                 @include media(1366) {
                     right: 5px;
+                }
+
+                @include media(1200) {
                     animation: none;
                 }
 
